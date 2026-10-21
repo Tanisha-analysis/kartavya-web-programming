@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KARTAVYA - Share & Reuse</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Share & Reuse</h1>
+            <p>Share What You Have. Help Someone Who Need It.</p>
+        </header>
+        <main>
+            <section>
+            <h2>List an Items for Sharing</h2>
+            <p>Have something useful that you no longer need? Share it with someone.</p>
+            <form id="reuseForm" method="POST" action="/share_reuse">
+                <label>Your Name:</label>
+                <input type="text" id="ownerName" placeholder="Enter your name" required>
+                <br><br>
+                <label>Item Name:</label>
+                <input type="text" id="itemName" placeholder="Enter item Name" required>
+                <br><br>
+                <label>Item Category:</label>
+                <select id="itemCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Electronincs">Electronincs</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+                <label>Item Description:</label>
+                <textarea id="itemDescription" placeholder="Describe the item" required></textarea>
+                <br><br>
+                <button type="submit">Share Item</button>
+            </form>
+            <p id="reuseMessage"></p>
+            </section>
+            <p><a href="/templates/dashboard.html">Back to Dashboard</a></p>
+        </main>
+        <script src="/static/js/share_reuse.js"></script>
+    </body>
+</html>

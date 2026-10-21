@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KARTAVYA- Help Connect</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Help Connect</h1>
+        <p>Connecting People. Spreading Kindness</p>
+    </header>
+    <main>
+        <section>
+            <h2>Request Help</h2>
+            <p>Need assisstance? Tell us what help you nees.</p>
+            <form id="helpRequestForm" method="POST" action="/help_connect">
+                <label>Your Name:</label>
+                <input type="text" id="requestName" placeholder="Enter your name" required>
+                <br><br>
+                <label>Email:</label>
+                <input type="email" id="requiredEmail" placeholder="Enter your email" required>
+                <br><br>
+                <label>Type of Help Needed:</label>
+                <select id="helpType" required>
+                    <option value="">Select help type</option>
+                    <option value="Education">Education</option>
+                    <option value="Food">Food</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+                <label>Describe Your requirement:</label>
+                <textarea id="helpDescription" placeholder="Describe the help you need" required></textarea>
+                <br><br>
+                <button type="submit">Submit Request</button>
+            </form>
+            <p id="helpMessage"></p>
+        </section>
+
+        <section>
+            <h2>Become a Volunteer</h2>
+            <p>Offer your time and skills to help someone in your community. </p>
+            <button type="button" id="volunteerButton">I want to Volunteer</button>
+            <p id="volunteerButton"></p>
+        </section>
+        <p><a href="/templates/dashboard.html">Back to Dashboard</a></p>
+    </main>
+    <script src="/static/js/help_connect.js"></script>
+</body>
+
+</html>
